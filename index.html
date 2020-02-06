@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <title>A Multiplayer Game</title>
+    <style>
+      canvas {
+        width: 800px;
+        height: 600px;
+        border: 5px solid black;
+        margin-left: 29%;
+      }
+      h1,h2,li{
+        text-align: center;
+      }
+    </style>
+    <script src="/socket.io/socket.io.js"></script>
+  </head>
+  <body>
+    <h1>Rock Paper Scissors Gameazz</h1>
+    <h2>Pick your choice!</h2>
+    <li>Rock Beats Scissors!</li>
+    <li>Scissors Beats Paper!</li>
+    <li>Paper Beats Rock!</li>
+    <ul id="gameEvents">
+      <li>Welcome!</li>
+    </ul>
+
+    <button id="rock" name="rock">Rock</button>
+    <button id="paper" name="paper">Paper</button>
+    <button id="scissors" name="Scissors">Scissors</button>
+  </body>
+  <script src="/static/game.js"></script>
+</html>
