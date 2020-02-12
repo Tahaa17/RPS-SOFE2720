@@ -3,11 +3,11 @@ var socket = io();
 //RPS STUFF
 function logGameEvents(text)
 {
-  var parent=document.getElementById('gameEvents')
-  var eventItem= document.createElement('li');
-  eventItem.innerHTML=text;
+  var displayContainer=document.getElementById('gameEvents')
+  var gameEvent= document.createElement('li');
+  gameEvent.innerHTML=text;
 
-  parent.appendChild(eventItem);
+  displayContainer.appendChild(gameEvent);
 };
 function addChoices()
 {
@@ -29,5 +29,4 @@ addChoices();
 logGameEvents('PooPooPeePee');
 
 socket.on('message',logGameEvents)
-
 //THIS IS OLD GAME STUFF

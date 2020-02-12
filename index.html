@@ -2,16 +2,66 @@
   <head>
     <title>A Multiplayer Game</title>
     <style>
-      canvas {
-        width: 800px;
-        height: 600px;
-        border: 5px solid black;
-        margin-left: 29%;
-      }
-      h1,h2,li{
-        text-align: center;
-      }
-    </style>
+body{
+  background: grey;
+}
+h1{
+  text-align: center;
+  font-size: 50px;
+  text-shadow: 2px 2px 2px pink;
+}
+
+h2{
+  text-align: center;
+  font-size: 30px;
+}
+
+li{
+  text-align: center;
+  font-size: 21px;
+  text-shadow: 0.5px 0.5px 1px pink;
+}
+#rock{
+  background-color: lightblue;
+    border: none;
+    color: black;
+    padding: 15px 38px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    position: absolute;
+    left: 400px;
+
+}
+#paper{
+  background-color: lightgreen;
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    position: absolute;
+    left: 737px;
+
+}
+#scissors{
+  background-color: lightpink;
+    border: none;
+    color: black;
+    padding: 15px 28px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    position: absolute;
+    left: 1100px;
+
+}
+
+</style>
     <script src="/socket.io/socket.io.js"></script>
   </head>
   <body>
