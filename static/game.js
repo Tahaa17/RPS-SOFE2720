@@ -1,6 +1,7 @@
 var socket = io();
 
 //RPS STUFF
+//Function to put game events onto html page
 function logGameEvents(text)
 {
   var displayContainer=document.getElementById('gameEvents')
@@ -9,6 +10,7 @@ function logGameEvents(text)
 
   displayContainer.appendChild(gameEvent);
 };
+//Adding listeners to the choices buttons
 function addChoices()
 {
   var rockButton=document.getElementById('rock');
@@ -26,7 +28,6 @@ function addChoices()
   });
 };
 addChoices();
-logGameEvents('PooPooPeePee');
 
+//Listening for game events
 socket.on('message',logGameEvents)
-//THIS IS OLD GAME STUFF

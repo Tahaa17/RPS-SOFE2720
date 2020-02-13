@@ -1,82 +1,82 @@
 <html>
-  <head>
-    <title>A Multiplayer Game</title>
-    <style>
-body{
-  background: grey;
-}
-h1{
-  text-align: center;
-  font-size: 50px;
-  text-shadow: 2px 2px 2px pink;
-}
+<head>
+  <title>A Multiplayer Game</title>
+  <style>
+    body{
+      background: grey;
+    }
+    h1{
+      text-align: center;
+      font-size: 50px;
+      text-shadow: 2px 2px 2px pink;
+    }
 
-h2{
-  text-align: center;
-  font-size: 30px;
-}
+    h2{
+      text-align: center;
+      font-size: 30px;
+    }
 
-li{
-  text-align: center;
-  font-size: 21px;
-  text-shadow: 0.5px 0.5px 1px pink;
-}
-#rock{
-  background-color: lightblue;
-    border: none;
-    color: black;
-    padding: 15px 38px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    position: absolute;
-    left: 400px;
+    li{
+      text-align: center;
+      font-size: 21px;
+      text-shadow: 0.5px 0.5px 1px pink;
+    }
+    #rock{
+      background-color: lightblue;
+      border: none;
+      color: black;
+      padding: 15px 38px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      position: absolute;
+      left: 400px;
 
-}
-#paper{
-  background-color: lightgreen;
-    border: none;
-    color: black;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    position: absolute;
-    left: 737px;
+    }
+    #paper{
+      background-color: lightgreen;
+      border: none;
+      color: black;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      position: absolute;
+      left: 737px;
 
-}
-#scissors{
-  background-color: lightpink;
-    border: none;
-    color: black;
-    padding: 15px 28px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    position: absolute;
-    left: 1100px;
+    }
+    #scissors{
+      background-color: lightpink;
+      border: none;
+      color: black;
+      padding: 15px 28px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      position: absolute;
+      left: 1100px;
 
-}
+    }
 
 </style>
-    <script src="/socket.io/socket.io.js"></script>
-  </head>
-  <body>
-    <h1>Rock Paper Scissors Gameazz</h1>
-    <h2>Pick your choice!</h2>
-    <li>Rock Beats Scissors!</li>
-    <li>Scissors Beats Paper!</li>
-    <li>Paper Beats Rock!</li>
-    <ul id="gameEvents">
-      <li>Welcome!</li>
-    </ul>
+<script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+  <h1>Rock Paper Scissors Gameazz</h1>
+  <h2>Pick your choice!</h2>
+  <li>Rock Beats Scissors!</li>
+  <li>Scissors Beats Paper!</li>
+  <li>Paper Beats Rock!</li>
+  <ul id="gameEvents">
+    <li>Welcome!</li>
+  </ul>
 
-    <button id="rock" name="rock">Rock</button>
-    <button id="paper" name="paper">Paper</button>
-    <button id="scissors" name="Scissors">Scissors</button>
-  </body>
-  <script src="/static/game.js"></script>
+  <button id="rock" name="rock">Rock</button>
+  <button id="paper" name="paper">Paper</button>
+  <button id="scissors" name="Scissors">Scissors</button>
+</body>
+<script src="/static/game.js"></script>
 </html>

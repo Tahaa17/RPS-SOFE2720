@@ -28,6 +28,7 @@ var playerOne=null;
 //Connection Logic
 function connectionMade(socket){
   socket.emit('message', 'Connected to the game successfully!');
+  //Checking if there is already a waiting player, if not assigning the new socket to be waiting player
   if(playerOne==null) {
     playerOne=socket;
     playerOne.emit('message', 'Waiting for another player to connect...');
@@ -43,13 +44,16 @@ function connectionMade(socket){
 io.on('connection',connectionMade);
 
 //RPS STUFF
+//Main Game Logic
 function gameStart(player1, player2){
   players=[player1,player2];
   playersChoices=[null,null];
 
+  //Listening for each players choices
   players.forEach((player, i) => {
     player.emit('message','Both players connected, starting game!');
     player.on('choice',function(choice){
+      //Checking if an existing choice has already been made
       if(playersChoices[i]==null)
       {
         playersChoices[i]=choice;
@@ -58,6 +62,7 @@ function gameStart(player1, player2){
       else {
         player.emit('message','You already selected '+playersChoices[i]+'! Please wait for the other player to make their choice.');
       }
+      //Running gameOver function everytime a choice has been made
       gameOver();
     });
   });
@@ -66,6 +71,7 @@ function gameStart(player1, player2){
 //Conditionals for end game
 function gameOver()
 {
+  //If both players made a choice, test who wins and end game
   if (playersChoices[0]!=null&&playersChoices[1]!=null)
   {
     io.emit('message', 'Game Over!!')
@@ -88,6 +94,7 @@ function gameOver()
       io.emit('message', 'Player Two Wins!!!!')
     }
 
+    //Resetting game
     playersChoices=[null,null];
     io.emit('message', 'Beginning next round...Make your choices!');
   }
